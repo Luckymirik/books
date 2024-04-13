@@ -1,0 +1,11 @@
+create table books(
+  id bigserial,
+  name varchar,
+  release_date date,
+  author varchar
+);
+
+insert into books(id,name,release_date,author)
+values (1,'Истоиря','01-01-2023','Кац'),
+       (2,'Кремль','02.02.2024','Зыгарь'),
+       (3,'Россия','03.03.2023','Акунин')
