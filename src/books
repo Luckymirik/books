@@ -5,6 +5,7 @@ create table books(
   author varchar
 );
 
+
 insert into books(id,name,release_date,author)
 values (1,'Истоиря','01-01-2023','Кац'),
        (2,'Кремль','02.02.2024','Зыгарь'),
