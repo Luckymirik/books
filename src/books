@@ -1,12 +1,23 @@
 create table books(
-  id bigserial ,
+  id bigserial  ,
   name varchar,
   release_date date,
   author varchar
 );
 
-
 insert into books(id,name,release_date,author)
 values (1,'Истоиря','01-01-2023','Кац'),
        (2,'Кремль','02.02.2024','Зыгарь'),
-       (3,'Россия','03.03.2023','Акунин')
+       (3,'Россия','03.03.2023','Акунин');
+create table genres(
+    id bigserial primary key ,
+    genre varchar
+);
+insert into genres(id,genre)
+values (1,'Исторические'),
+       (2,'Романы');
+alter table books
+add genre_id bigserial primary key;
+select *
+from books
+join genres on books.genre_id = genres.id;
